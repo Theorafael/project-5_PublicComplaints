@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Link -->
+     <link rel="stylesheet" href="/assets/styles/index.css">
+     <!-- Font Awesome Link -->
+      <link rel="stylesheet" href="">
+    <title>CRUD Using JavaScript</title>
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <header class="header-content" id="myHeader">
+        <a href="index.html"><img src="/assets/images/T Logo.svg" alt="Logo" class="logo"></a>
+        <h1>Public Complaint Form</h1>
+        <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar" id="sidebar">
+           <a href="" class="closebtn" onclick="toggleSidebar()">×</a>
+           <a href="">Menu 1</a>
+           <a href="">Menu 2</a>
+           <a href="">Menu 3</a>
+           <a href="">Menu 4</a>
+    </div>
+
+    <!-- Main Content -->
+     <main>
+        <h2>Public Complaint Form</h2>
+        <form action="" id="complaintForm">
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" id="name" required><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" required><br>
+
+            <label for="complaint">Complaint</label><br>
+            <textarea id="complaint" name="complaint" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+     </main>
+
+    
+
+
+
+
+
+
+
+
+    <script src="/assets/scripts/index.js"></script>
+</body>
+</html>

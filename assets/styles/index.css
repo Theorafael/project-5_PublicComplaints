@@ -1,0 +1,70 @@
+/* Define CSS Variables for Light Mode */
+:root {
+    --background-color: #f4f4f4; /* Light background */
+    --header-background: #ffffff; /* Header background */
+    --header-text-color: #333333; /* Header text color */
+    --sidebar-background: #ffffff; /* Sidebar background */
+    --sidebar-text-color: #333333; /* Sidebar text color */
+    --link-hover-color: #575757; /* Link hover color */
+    --form-background: #ffffff; /* Form background */
+    --input-border-color: #ccc; /* Input border color */
+    --button-background: #333333; /* Button background */
+    --button-text-color: #ffffff; /* Button text color */
+    --button-hover-background: #575757; /* Button hover background */
+}
+
+/* Header Styling */
+.header-content {
+    background-color: var(--header-background); /* Use the defined variable for background */
+    color: var(--header-text-color); /* Use the defined variable for text color */
+    padding: 10px 20px; /* Add padding for spacing, adjust as needed */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: flex-start; /* Align items to the top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align logo to the top */
+}
+
+.logo {
+    max-width: 50px; /* Set a smaller maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-content h1 {
+    font-size: 24px; /* Set font size for the header title */
+    margin: 0; /* Remove default margin */
+}
+
+.header-content ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+.header-content ul li {
+    margin-left: 20px; /* Add space between list items */
+}
+
+.header-content ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--header-text-color); /* Use the defined variable for link color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-content ul li a:hover {
+    color: var(--link-hover-color); /* Change color on hover */
+}
+
+.hamburger {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 24px; /* Set font size for the hamburger icon */
+    cursor: pointer; /* Change cursor to pointer */
+    color: var(--header-text-color); /* Use the defined variable for icon color */
+}
