@@ -1,8 +1,11 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    if (sidebar.style.display === "block") {
-        sidebar.style.display = "none";
-    } else {
-        sidebar.style.display = "block";
-    }
-}
+// Theme Switcher Functionality
+const themeSwitcher = document.getElementById('theme-switcher');
+const body = document.body;
+const sidebar = document.querySelector('.sidebar');
+const rightSidebar = document.querySelector('.right');
+
+themeSwitcher.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    sidebar.classList.toggle('dark-theme');
+    rightSidebar.classList.toggle('dark-theme');
+});
