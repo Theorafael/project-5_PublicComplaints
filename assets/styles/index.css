@@ -1,42 +1,42 @@
-/* Define CSS Variables for Light Theme */
+/* Define CSS Variables for Light Theme with Gradients */
 :root {
-    --light-background-color: #e6f0ff; /* Light blue background */
-    --light-text-color: #003366; /* Dark blue text color */
-    --light-header-background: #cce0ff; /* Light blue header background */
-    --light-header-text-color: #003366; /* Dark blue header text color */
-    --light-sidebar-background: #003366; /* Sidebar background */
-    --light-sidebar-text-color: #cce0ff; /* Dark blue sidebar text color */
-    --light-link-hover-color: #0056b3; /* Darker blue for link hover */
-    --light-form-background: #cce0ff; /* Form background */
-    --light-input-border-color: #b3d1ff; /* Light blue input border color */
-    --light-button-background: #007BFF; /* Bright blue button background */
-    --light-button-text-color: #ffffff; /* Button text color */
-    --light-button-hover-background: #0056b3; /* Darker blue for button hover */
-    --light-button-secondary-background: #cce0ff; /* Light blue for secondary button */
-    --light-button-secondary-text-color: #003366; /* Dark blue for secondary button text */
-    --light-right-sidebar-background: #cce0ff; /* Light blue for right sidebar */
-    --light-right-sidebar-text-color: #003366; /* Dark blue for right sidebar text */
+    --light-background-color: linear-gradient(135deg, #e6f2ff, #f0f7ff); /* Gradient light blue background */
+    --light-text-color: #002b5c; /* Slightly darker blue text color for contrast */
+    --light-header-background: linear-gradient(135deg, #cce6ff, #d9ebff); /* Gradient light blue header background */
+    --light-header-text-color: #002b5c; /* Slightly darker blue header text color */
+    --light-sidebar-background: linear-gradient(135deg, #007bf7, #72b9ff); /* Gradient blue sidebar background */
+    --light-sidebar-text-color: #e6f2ff; /* Light blue sidebar text color */
+    --light-link-hover-color: #004080; /* Darker blue for link hover */
+    --light-form-background: linear-gradient(135deg, #cce6ff, #d9ebff); /* Gradient light blue form background */
+    --light-input-border-color: #99c2ff; /* Brighter light blue input border color */
+    --light-button-background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient blue button background */
+    --light-button-text-color: #ffffff; /* White button text color */
+    --light-button-hover-background: linear-gradient(135deg, #0056b3, #004080); /* Gradient darker blue for button hover */
+    --light-button-secondary-background: linear-gradient(135deg, #cce6ff, #d9ebff); /* Gradient light blue for secondary button */
+    --light-button-secondary-text-color: #002b5c; /* Slightly darker blue for secondary button text */
+    --light-right-sidebar-background: linear-gradient(135deg, #cce6ff, #d9ebff); /* Gradient light blue for right sidebar */
+    --light-right-sidebar-text-color: #002b5c; /* Slightly darker blue for right sidebar text */
     --button-hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for button hover */
 }
 
-/* Define CSS Variables for Dark Theme */
+/* Define CSS Variables for Dark Theme with Gradients */
 .dark-theme {
-    --dark-background-color: #1a1a1a; /* Dark background */
+    --dark-background-color: linear-gradient(135deg, #1a1a1a, #2c2c2c); /* Gradient dark background */
     --dark-text-color: #ffffff; /* Light text color */
-    --dark-header-background: #333333; /* Dark header background */
+    --dark-header-background: linear-gradient(135deg, #333333, #444444); /* Gradient dark header background */
     --dark-header-text-color: #ffffff; /* Light header text color */
-    --dark-sidebar-background: #2c2c2c; /* Dark sidebar background */
+    --dark-sidebar-background: linear-gradient(135deg, #050505, #3c3c3c); /* Gradient dark sidebar background */
     --dark-sidebar-text-color: #ffffff; /* Light sidebar text color */
-    --dark-link-hover-color: #4d94ff; /* Lighter blue for link hover */
-    --dark-form-background: #2c2c2c; /* Dark form background */
+    --dark-link-hover-color: #ffffff; /* Lighter blue for link hover */
+    --dark-form-background: linear-gradient(135deg, #2c2c2c, #3c3c3c); /* Gradient dark form background */
     --dark-input-border-color: #555555; /* Dark input border color */
-    --dark-button-background: #007BFF; /* Bright blue button background */
-    --dark-button-text-color: #ffffff; /* Button text color */
-    --dark-button-hover-background: #0056b3; /* Darker blue for button hover */
-    --dark-button-secondary-background: #333333; /* Dark background for secondary button */
+    --dark-button-background: linear-gradient(135deg, #ffffff, #3c3c3c); /* Gradient blue button background */
+    --dark-button-hover-background: linear-gradient(135deg, #ffffff, #8b8b8b); /* Gradient darker blue for button hover */
+    --dark-button-secondary-background: linear-gradient(135deg, #333333, #444444); /* Gradient dark background for secondary button */
     --dark-button-secondary-text-color: #ffffff; /* Light text for secondary button */
-    --dark-right-sidebar-background: #2c2c2c; /* Dark background for right sidebar */
+    --dark-right-sidebar-background: linear-gradient(135deg, #2c2c2c, #3c3c3c); /* Gradient dark background for right sidebar */
     --dark-right-sidebar-text-color: #ffffff; /* Light text for right sidebar */
+    --button-hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for button hover */
 }
 
 * {
@@ -49,7 +49,85 @@
         color: var(--light-text-color);
         height: 100vh;
         font-family: "Euclid Circular A";
+        
     }
+
+    /* Ensure the dark theme is applied when the .dark-theme class is added to the body */
+    body.dark-theme {
+        background: var(--dark-background-color);
+        color: var(--dark-text-color);
+    }
+
+        /* Dark theme styles for the sidebar */
+        .dark-theme .sidebar {
+            background: var(--dark-sidebar-background);
+            color: var(--dark-sidebar-text-color);
+        }
+
+        /* Dark theme styles for the left section of the sidebar */
+        .dark-theme .left {
+            background: var(--dark-sidebar-background);
+        }
+
+        .dark-theme .left img {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Dark theme styles for the right section of the sidebar */
+        .dark-theme .right {
+            background: var(--dark-right-sidebar-background);
+            color: var(--dark-right-sidebar-text-color);
+        }
+
+        /* Dark theme styles for buttons in the sidebar */
+        .dark-theme .sidebar button {
+            background: var(--dark-button-background);
+            color: var(--dark-button-text-color);
+        }
+
+        .dark-theme .sidebar button:hover {
+            background: var(--dark-button-hover-background);
+        }
+
+        /* Dark theme styles for the theme toggle button */
+        .dark-theme #theme-switcher {
+            background: var(--dark-button-background); /* Use the same gradient as other buttons */
+            color: var(--dark-button-text-color); /* White text color */
+        }
+
+        .dark-theme #theme-switcher:hover {
+            background: var(--dark-button-hover-background); /* Use the same hover gradient as other buttons */
+        }
+
+        /* Dark theme styles for the right section headings */
+        .dark-theme .right h1 {
+            color: var(--dark-header-text-color);
+        }
+
+        .dark-theme .right h2 {
+            color: var(--dark-text-color);
+        }
+
+        /* Dark theme styles for the right section buttons */
+        .dark-theme .right button {
+            background: var(--dark-button-secondary-background);
+            color: var(--dark-right-sidebar-text-color);
+        }
+
+        .dark-theme .right button:hover {
+            background: var(--dark-button-hover-background);
+            color: var(--dark-button-text-color);
+        }
+
+        .dark-theme .right button i {
+            background: var(--dark-button-background);
+        }
+
+        .dark-theme .right button:hover i {
+            background: var(--dark-button-hover-background);
+        }
+
+        /* Global Styles */
   
         .sidebar {
             background: var(--light-sidebar-background);
@@ -64,7 +142,6 @@
             gap: 8px;
             width: 80px;
             border-radius: 18px;
-            transition: width 0.4s;
         }
 
         .sidebar button {
@@ -75,7 +152,6 @@
             border-radius: 8px;
             font-family: inherit;
             cursor: pointer;
-            transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
         }
   
             .left,
@@ -83,7 +159,7 @@
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                transition: 0.4s;
+                
                 border-radius: inherit;
                 display: flex;
                 flex-direction: column;
@@ -100,6 +176,8 @@
                 .left img {
                     width: 40px;
                     margin: 34px 0 40px;
+                    transition: filter 0.3s;
+                    /* filter: brightness(0) invert(1); */
                 }
   
                 .left button {
@@ -118,6 +196,26 @@
                 .left button:last-of-type {
                     margin-top: auto;
                     margin-bottom: 20px;
+                }
+
+                .left button#theme-switcher {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 18px;
+                    display: grid;
+                    place-items: center;
+                    background: var(--light-button-background);
+                    color: var(--light-button-text-color);
+                    border-radius: 8px;
+                    cursor: pointer;
+                    
+                }
+                
+                .left button#theme-switcher:hover {
+                    background: var(--light-button-hover-background);
+                    box-shadow: var(--button-hover-shadow);
+                    transform: scale(1.05);
+                    opacity: 0.9;
                 }
 
             .right {
@@ -180,7 +278,7 @@
                     background: var(--light-button-hover-background);
                     color: var(--light-button-text-color);
                     box-shadow: var(--button-hover-shadow); /* Apply shadow on hover */
-                    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+                    
                 }
   
                     .right button:hover i {
