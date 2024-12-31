@@ -16,3 +16,19 @@ document.getElementById('complaint-form').addEventListener('submit', (e) => {
     alert('Complaint submitted successfully!');
     window.location.href = 'index.html'; // Redirect to the complaints list
 });
+
+// index.js
+
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+    localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+// Load theme on page load
+window.onload = () => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+};

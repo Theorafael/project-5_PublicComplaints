@@ -379,3 +379,164 @@
         .dark-theme .complaint-card {
             background: var(--dark-form-background);
         }
+
+
+
+
+
+        /* Add these styles to index.css */
+
+/* Form Styles */
+.main-content h2 {
+    text-align: center;
+}
+
+#complaint-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--light-form-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme #complaint-form {
+    background: var(--dark-form-background);
+}
+
+#complaint-form label {
+    font-weight: 500;
+    color: var(--light-text-color);
+}
+
+.dark-theme #complaint-form label {
+    color: var(--dark-text-color);
+}
+
+#complaint-form input,
+#complaint-form textarea {
+    padding: 8px;
+    border: 1px solid var(--light-input-border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    background: var(--light-background-color);
+    color: var(--light-text-color);
+}
+
+.dark-theme #complaint-form input,
+.dark-theme #complaint-form textarea {
+    border-color: var(--dark-input-border-color );
+    background: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+/* Submit Button Styles */
+#complaint-form button {
+    padding: 10px;
+    background: var(--light-button-background);
+    color: var(--light-button-text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#complaint-form button:hover {
+    background: var(--light-button-hover-background);
+    box-shadow: var(--button-hover-shadow);
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+/* Dark Theme Styles for Submit Button */
+.dark-theme #complaint-form button {
+    background: var(--dark-button-background);
+    color: var(--dark-button-text-color);
+}
+
+.dark-theme #complaint-form button:hover {
+    background: var(--dark-button-hover-background);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background: var(--light-sidebar-background);
+    color: var(--light-sidebar-text-color);
+    padding: 16px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid var(--light-input-border-color);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.dark-theme .footer {
+    background: var(--dark-sidebar-background);
+    color: var(--dark-sidebar-text-color);
+    border-top: 1px solid var(--dark-input-border-color);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer .address,
+.footer .copyright {
+    margin: 0;
+    font-size: 14px;
+}
