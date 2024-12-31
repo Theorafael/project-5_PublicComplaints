@@ -22,16 +22,16 @@
         <!-- Left Side -->
         <div class="left">
             <img src="assets/images/T Logo.svg" alt="T Logo">
-            <button><i class="ai-home-alt1"></i></button>
-            <button><i class="ai-chat-dots"></i></button>
-            <button><i class="ai-gear"></i></button>
-            <button><i class="ai-link-out"></i></button>
+            <a href="index.html" class="button-link"><i class="ai-home-alt1"></i></a>
+            <a href="addComplaint.html" class="button-link"><i class="ai-plus"></i></a>
+            <a href="" class="button-link"><i class="ai-gear"></i></a>
+            <a href="" class="button-link"><i class="ai-link-out"></i></a>
             <button id="theme-switcher" onclick="toggleTheme()"><i class="ai-sun"></i></button>
         </div>
 
         <!-- Right Side -->
         <div class="right">
-            <h1>Public Complaints</h1>
+            <h1>T</h1>
             <nav class="buttons">
                 <button>
                     <i class="ai-dashboard"></i>
@@ -80,6 +80,11 @@
     </aside>
 
     <!-- Main Section -->
-
+    <main class="main-content">
+        <h2>Public Complaints</h2>
+        <div id="complaints-list" class="complaints-list">
+            <!-- Complaints will be dynamically added here -->
+        </div>
+    </main>
 </body>
 </html>

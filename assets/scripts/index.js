@@ -33,3 +33,21 @@ document.getElementById('theme-switcher').addEventListener('click', toggleTheme)
 
 // Load the saved theme when the page loads
 window.addEventListener('load', loadTheme);
+
+
+// Load complaints when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const complaintsList = document.getElementById('complaints-list');
+    const complaints = JSON.parse(localStorage.getItem('complaints')) || [];
+
+    complaints.forEach(complaint => {
+        const complaintCard = document.createElement('div');
+        complaintCard.className = 'complaint-card';
+        complaintCard.innerHTML = `
+            <h3>${complaint.title}</h3>
+            <p>${complaint.description}</p>
+            <small>Submitted by: ${complaint.name}</small>
+        `;
+        complaintsList.appendChild(complaintCard);
+    });
+});
